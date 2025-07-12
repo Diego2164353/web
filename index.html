@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CINE BOOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      align-items: center;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      align-items: center;
+      max-height: 100%;
+    }
+    .card h3, .card p {
+      margin: 0.5rem 0;
+    }
+    .card input[type="checkbox"] {
+      margin-top: 0.5rem;
+    }
+    .boleta {
+      background-color: #222;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .combo-section {
+      margin-top: 2rem;
+    }
+    .combo-section h2 {
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #e50914;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CARTELERA DORADA</h1>
+  </header>
+
+  <div class="container">
+    <div class="grid" id="peliculas">
+      <!-- Tarjetas de películas -->
+      <div class="card">
+        <img src="https://i0.wp.com/www.conlosojosabiertos.com/wp-content/uploads/2025/07/28_Years_Later-958240308-large.jpg?ssl=1" alt="Pelicula 1">
+        <h3>EXTERMINIO "LA EVOLUCIÓN"</h3>
+        <p>Precio: S/ 18</p>
+        <input type="checkbox" data-nombre="Pelicula 1" data-precio="18"> Seleccionar
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BNzJjNDYxYzUtNTBkYy00NDY3LWIyMzUtOTBhODRjOTM4ZTgxXkEyXkFqcGc@._V1_.jpg" alt="Pelicula 2">
+        <h3>SUPERMAN</h3>
+        <p>Precio: S/ 20</p>
+        <input type="checkbox" data-nombre="Pelicula 2" data-precio="20"> Seleccionar
+      </div>
+      <div class="card">
+        <img src="https://resizing.flixster.com/fpo_YIKk9_EAgnlsboOcHEVeekQ=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzFlODdlYjg1LTlhODEtNDYxYy04YmY1LTc4OGEyYzU1YjQ0Zi5qcGc=" alt="Pelicula 3">
+        <h3>JURASSIC WORLD "RENACER"</h3>
+        <p>Precio: S/ 19</p>
+        <input type="checkbox" data-nombre="Pelicula 3" data-precio="19"> Seleccionar
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzEzMTgwNzktYTk4ZC00ZTQ1LTllZGYtNzY4MTk2ZDM1MzA0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Pelicula 4">
+        <h3>COMO ENTRENAR A TU DRAGÓN</h3>
+        <p>Precio: S/ 22</p>
+        <input type="checkbox" data-nombre="Pelicula 4" data-precio="22"> Seleccionar
+      </div>
+      <div class="card">
+        <img src="https://images.justwatch.com/poster/331477087/s718/until-dawn.jpg" alt="Pelicula 5">
+        <h3>UNTIL DAWN</h3>
+        <p>Precio: S/ 21</p>
+        <input type="checkbox" data-nombre="Pelicula 5" data-precio="21"> Seleccionar
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Pelicula 6">
+        <h3>LOS 4 FANTASTICOS</h3>
+        <p>Precio: S/ 17</p>
+        <input type="checkbox" data-nombre="Pelicula 6" data-precio="17"> Seleccionar
+      </div>
+    </div>
+
+    <div class="combo-section">
+      <h2>Combos de Snacks</h2>
+      <div class="grid">
+        <div class="card">
+        <img src="https://png.pngtree.com/png-clipart/20231001/original/pngtree-d-popcorn-striped-bucket-cinema-snack-movie-entertainment-concept-high-quality-png-image_13029088.png" alt="Pelicula 6">
+          <h3>Cancha Grande</h3>
+          <p>Precio: S/ 12</p>
+          <input type="checkbox" data-nombre="Cancha Grande" data-precio="10"> Seleccionar
+        </div>
+        <div class="card">
+        <img src="https://licoresinmemorial.com/wp-content/uploads/2025/01/cocacolapersonal.png" alt="Pelicula 6">
+          <h3>Gaseosa personal</h3>
+          <p>Precio: S/ 7</p>
+          <input type="checkbox" data-nombre="Gaseosa 1L" data-precio="8"> Seleccionar
+        </div>
+        <div class="card">
+        <img src="https://media.istockphoto.com/id/681903568/photo/popcorn-in-box-with-cola.jpg?s=612x612&w=0&k=20&c=0rXGh6COImJ8iYpv99Yt2dQOyMneVw_rJw6QwsZPrh4=" alt="Pelicula 6">
+          <h3>Combo Cancha + Gaseosa</h3>
+          <p>Precio: S/ 20</p>
+          <input type="checkbox" data-nombre="Combo Cancha + Gaseosa" data-precio="15"> Seleccionar
+        </div>
+        <div class="card">
+        <img src="https://www.doritos.de/prod/s3fs-public/2025-04/lays_doritos-2024-santitas-neu-110g-nacho-cheese-packshot_01.png" alt="Pelicula 6">
+          <h3>Nachos con Queso</h3>
+          <p>Precio: S/ 9</p>
+          <input type="checkbox" data-nombre="Nachos con Queso" data-precio="12"> Seleccionar
+        </div>
+        <div class="card">
+        <img src="https://candylandperu.com/wp-content/uploads/2023/08/SORPRESA-7-2-2.png" alt="Pelicula 6">
+          <h3>Combo Dulce (Snacks)</h3>
+          <p>Precio: S/ 28</p>
+          <input type="checkbox" data-nombre="Combo Dulce" data-precio="16"> Seleccionar
+        </div>
+        <div class="card">
+        <img src="https://images.rappi.pe/restaurants_background/cineplanet1-1744744607384.jpg" alt="Pelicula 6">
+          <h3>Combo Familiar (2 Canchas + 2 Gaseosas)</h3>
+          <p>Precio: S/ 45</p>
+          <input type="checkbox" data-nombre="Combo Familiar" data-precio="25"> Seleccionar
+        </div>
+      </div>
+    </div>
+
+    <div class="boleta">
+      <h2>Boleta de Compra</h2>
+      <ul id="listaCompra"></ul>
+      <p>Total: S/ <span id="total">0</span></p>
+      <button onclick="cancelarCompra()">Finalizar compra</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Cine Virtual</p>
+  </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const listaCompra = document.getElementById("listaCompra");
+    const totalSpan = document.getElementById("total");
+    let itemsSeleccionados = [];
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        const nombre = this.dataset.nombre;
+        const precio = parseFloat(this.dataset.precio);
+
+        if (this.checked) {
+          itemsSeleccionados.push({ nombre, precio });
+        } else {
+          itemsSeleccionados = itemsSeleccionados.filter(item => item.nombre !== nombre);
+        }
+
+        actualizarBoleta();
+      });
+    });
+
+    function actualizarBoleta() {
+      listaCompra.innerHTML = "";
+      let total = 0;
+      itemsSeleccionados.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - S/ ${item.precio}`;
+        listaCompra.appendChild(li);
+        total += item.precio;
+      });
+      totalSpan.textContent = total.toFixed(2);
+    }
+
+    function cancelarCompra() {
+      window.location.href = "encuesta.html"; // Asegúrate que index.html sea tu página de inicio
+    }
+  </script>
+</body>
+</html>

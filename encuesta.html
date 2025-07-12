@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta de Películas</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      width: 450px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      color: white;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .btn {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #c70000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Encuesta de Películas</h2>
+    <form onsubmit="return enviarEncuesta(event)">
+      
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="genero">¿Cuál es tu género de película favorito?</label>
+      <select id="genero" name="genero">
+        <option>Acción</option>
+        <option>Comedia</option>
+        <option>Drama</option>
+        <option>Ciencia Ficción</option>
+        <option>Terror</option>
+        <option>Animación</option>
+      </select>
+
+      <label for="frecuencia">¿Con qué frecuencia vas al cine?</label>
+      <select id="frecuencia" name="frecuencia">
+        <option>Cada semana</option>
+        <option>1 vez al mes</option>
+        <option>Cada 2 meses</option>
+        <option>Casi nunca</option>
+      </select>
+
+      <label for="opinion">¿Qué opinas de la última película que viste?</label>
+      <textarea id="opinion" name="opinion" placeholder="Escribe tu opinión..."></textarea>
+
+      <label for="puntaje">¿Qué puntaje le das del 1 al 10?</label>
+      <input type="number" id="puntaje" name="puntaje" min="1" max="10" required>
+
+      <button type="submit" class="btn">Enviar encuesta</button>
+    </form>
+  </div>
+
+  <script>
+    function enviarEncuesta(event) {
+      event.preventDefault();
+      alert("¡Gracias por responder la encuesta!");
+      window.location.href = "index.html"; // Redirige al inicio o a otra página
+    }
+  </script>
+
+</body>
+</html>
